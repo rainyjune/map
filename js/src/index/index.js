@@ -20,14 +20,17 @@
   function bindPageEventListeners() {
     $('#trafficBtn').click(function () {
       require('../traffic/index.js');
+      return false;
     });
     $('#toolbarBtn').click(function () {
       var toolbar = require('../toolbar/index.js');
       toolbar.addControl(mapObj);
+      return false;
     });
     $('#toolbarBtnRemove').click(function () {
       var toolbar = require('../toolbar/index.js');
       toolbar.removeControl(mapObj);
+      return false;
     });
   }
   
