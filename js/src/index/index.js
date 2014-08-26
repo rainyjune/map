@@ -19,7 +19,13 @@
 
   function bindPageEventListeners() {
     $('#trafficBtn').click(function () {
-      require('../traffic/index.js');
+      var traffic = require('../traffic/index.js');
+      mapObj = traffic.showTraffic();
+      return false;
+    });
+    $('#trafficBtnRemove').click(function () {
+      var traffic = require('../traffic/index.js');
+      mapObj = traffic.removeTraffic();
       return false;
     });
     $('#toolbarBtn').click(function () {
