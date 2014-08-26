@@ -7,11 +7,18 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
   </head>
   <body>
+    <div id="customLayer">
+      <ul>
+        <li><a href="#" id="trafficBtn">Show Trafic</a></li>
+        <li><a href="#" id="toolbarBtn">Show Toolbar</a><a href="#" id="toolbarBtnRemove">Remove Toolbar</a></li>
+        <li><a href="#" id="overviewBtn">Show Overview</a></li>
+      </ul>
+    </div>
     <div id="container">
 
     </div>
     <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=97b27bfcd3d40ec66b150c4acb673034"></script>
-<script type="text/javascript" src="js/dist/seajs/1.3.1/sea-debug.js"></script>
+    <script type="text/javascript" src="js/dist/seajs/1.3.1/sea-debug.js"></script>
     <script type="text/javascript">
       seajs.config({
         base: './',
