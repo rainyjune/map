@@ -19,23 +19,27 @@
 
   function bindPageEventListeners() {
     $('#trafficBtn').click(function () {
-      var traffic = require('../traffic/index.js');
-      mapObj = traffic.showTraffic();
+      require.async('../traffic/index.js', function (traffic) {
+        mapObj = traffic.showTraffic();
+      });
       return false;
     });
     $('#trafficBtnRemove').click(function () {
-      var traffic = require('../traffic/index.js');
-      mapObj = traffic.removeTraffic();
+      require.async('../traffic/index.js', function (traffic) {
+        mapObj = traffic.removeTraffic();
+      });
       return false;
     });
     $('#toolbarBtn').click(function () {
-      var toolbar = require('../toolbar/index.js');
-      toolbar.addControl(mapObj);
+      require.async('../toolbar/index.js', function (toolbar) {
+        toolbar.addControl(mapObj);
+      });
       return false;
     });
     $('#toolbarBtnRemove').click(function () {
-      var toolbar = require('../toolbar/index.js');
-      toolbar.removeControl(mapObj);
+      require.async('../toolbar/index.js', function (toolbar) {
+        toolbar.removeControl(mapObj);
+      });
       return false;
     });
   }
